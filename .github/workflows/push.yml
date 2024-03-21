@@ -25,6 +25,7 @@ jobs:
           git config --global url.https://${{ secrets.admin}}@github.com/.insteadOf https://github.com/
           git add .
           git commit -m "Copy files from source repository"
+          git config pull.rebase false
           git pull origin github_io_pages
           git push origin main:github_io_pages
 
